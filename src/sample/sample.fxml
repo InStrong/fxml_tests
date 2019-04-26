@@ -1,0 +1,46 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.HBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ListView?>
+
+
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10"
+
+          styleClass="root">
+    <padding><Insets top="25" right="25" bottom="25" left="25"/></padding>
+
+   <Label text="Your storage"
+           GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Label text="Remote storage"
+            GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+   <ListView
+           prefWidth="600" prefHeight="710"
+       GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <ListView
+            prefWidth="600" prefHeight="710"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <HBox
+            GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button text="Upload" HBox.hgrow="ALWAYS" ></Button>
+        <Button text="Delete" HBox.hgrow="ALWAYS"></Button>
+        <Button text="Refresh" HBox.hgrow="ALWAYS"></Button>
+    </HBox>
+    <HBox
+            GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <Button text="Download" HBox.hgrow="ALWAYS"></Button>
+        <Button text="Delete" HBox.hgrow="ALWAYS"></Button>
+        <Button text="Refresh" HBox.hgrow="ALWAYS"></Button>
+    </HBox>
+    <stylesheets>
+        <URL value="@Login.css" />
+    </stylesheets>
+
+</GridPane>
